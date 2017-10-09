@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
-from selenium.webdriver.firefox.webdriver import WebDriver
-from selenium.webdriver.common.action_chains import ActionChains
-import time, unittest
+from selenium.webdriver.chrome.webdriver import *
+import unittest
 
 def is_alert_present(wd):
     try:
