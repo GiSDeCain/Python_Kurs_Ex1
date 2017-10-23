@@ -27,14 +27,14 @@ def login():
     wd.find_element_by_xpath("//form[@id='LoginForm']/input[3]").click()
 
 
-def add_name():
+def add_name(firstName="gfhfghh", middleName="xgnhghhc"):
     # name section
     wd.find_element_by_name("firstname").click()
     wd.find_element_by_name("firstname").clear()
-    wd.find_element_by_name("firstname").send_keys("gfhfghh")
+    wd.find_element_by_name("firstname").send_keys(firstName)
     wd.find_element_by_name("middlename").click()
     wd.find_element_by_name("middlename").clear()
-    wd.find_element_by_name("middlename").send_keys("xgnhghhc")
+    wd.find_element_by_name("middlename").send_keys(middleName)
     wd.find_element_by_name("lastname").click()
     wd.find_element_by_name("lastname").clear()
     wd.find_element_by_name("lastname").send_keys("xgnhcgh")
@@ -81,11 +81,11 @@ def add_numbers():
 
 def add_birthday():
     # day from dropdown list (1-31)
-    if not wd.find_element_by_xpath("//div[@id='content']/form/select[1]//option[3]").is_selected():
-        wd.find_element_by_xpath("//div[@id='content']/form/select[1]//option[3]").click()
+    # if not wd.find_element_by_xpath("//div[@id='content']/form/select[1]//option[3]").is_selected():
+      #  wd.find_element_by_xpath("//div[@id='content']/form/select[1]//option[3]").click()
     # month from drop down list (1-12)
-    if not wd.find_element_by_xpath("//div[@id='content']/form/select[2]//option[2]").is_selected():
-        wd.find_element_by_xpath("//div[@id='content']/form/select[2]//option[2]").click()
+    # if not wd.find_element_by_xpath("//div[@id='content']/form/select[2]//option[2]").is_selected():
+       # wd.find_element_by_xpath("//div[@id='content']/form/select[2]//option[2]").click()
     # year
     wd.find_element_by_name("byear").click()
     wd.find_element_by_name("byear").clear()
@@ -113,8 +113,8 @@ def add_new_contact_page():
 
 
 def submit_new_contact():
-    wd.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
-
+    #wd.find_element_by_xpath("//div[@id='content']/form[@submit='Enter']").click()
+    wd.find_element_by_link_text("Enter").click()
 
 def back_home_page():
     wd.find_element_by_link_text("home page").click()
