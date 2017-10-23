@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from selenium.webdriver.chrome.webdriver import WebDriver
+from model.contact import Contact
 
 
 success = True
@@ -25,10 +26,10 @@ def login():
     wd.find_element_by_xpath("//form[@id='LoginForm']/input[3]").click()
 
 
-def add_new_contact(firstName="gfhfghh", middleName="xgnhghhc", lastName="xgnhcgh", nickName="cxgbncgb",
+def add_new_contact(Contact(firstName="gfhfghh", middleName="xgnhghhc", lastName="xgnhcgh", nickName="cxgbncgb",
                     title="xgbxgb", company="xgnxcfgnn", address="cghnhmnmvghn", homeNumber="465567546", mobileNumber="64745467",
                     workNumber="64745746", faxNumber="467467456", email="fgvbxfgb@dfgdf.po", byear="1999",
-                    address2="xgfbfcgbh", phoneNumber2="45765677", notes="dghdfghdfgh"):
+                    address2="xgfbfcgbh", phoneNumber2="45765677", notes="dghdfghdfgh")):
     # go to add new contact page
     wd.find_element_by_link_text("add new").click()
     # name section
