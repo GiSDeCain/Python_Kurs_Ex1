@@ -70,7 +70,7 @@ class ContactHelper:
         # delete first contact from list
         wd = self.app.wd
         wd.find_element_by_xpath("//table[@id='maintable']//input[@type='checkbox']").click()
-        wd.find_element_by_xpath("//div[@class='left'][2]").click()
+        wd.find_element_by_xpath("//div[@class='left']/input[@value='Delete']").click()
         wd.switch_to_alert().accept()
 
 
