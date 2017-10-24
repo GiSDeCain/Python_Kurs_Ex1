@@ -66,5 +66,12 @@ class ContactHelper:
         wd = self.app.wd
         wd.find_element_by_link_text("add new").click()
 
+    def del_first_contact(self):
+        # delete first contact from list
+        wd = self.app.wd
+        wd.find_element_by_xpath("//div=[@id='center/*[@id='1']").click
+        wd.find_element_by_xpath("//*[contains(text(), 'Delete')]").click
+        wd.switchtoalert().accept()
+
 
 __author__ = 'GiSDeCain'

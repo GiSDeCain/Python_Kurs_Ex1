@@ -2,7 +2,7 @@
 from model.contact import Contact
 
 
-def test_add_new_contact(app):
+def test_add_contact(app):
     app.session.login(username="admin", password="secret")
     app.contact.add_new(Contact(firstName="gfhfghh", middleName="xgnhghhc", lastName="xgnhcgh", nickName="cxgbncgb",
                                 title="xgbxgb", company="xgnxcfgnn", address="cghnhmnmvghn",
