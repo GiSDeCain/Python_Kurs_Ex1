@@ -5,7 +5,7 @@ class ContactHelper:
     def __init__(self, app):
         self.app = app
 
-    def add_new_contact(self, contact):
+    def add_new(self, contact):
         wd = self.app.wd
         self.add_contact_page()
         # name section
