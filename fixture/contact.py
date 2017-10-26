@@ -74,7 +74,7 @@ class ContactHelper:
         wd.find_element_by_xpath("//div[@class='left']/input[@value='Delete']").click()
         wd.switch_to_alert().accept()
 
-    def modify_contact(self, contact):
+    def modify(self, contact):
         wd = self.app.wd
         # start modify contact
         wd.find_element_by_xpath("//td[@class='center']//*[@title='Edit'][1]").click()
