@@ -30,7 +30,7 @@ class GroupHelper:
         self.return_to_groups_page()
 
     # Created by me before lesson. modified after lesson
-    def modify(self, group):
+    def modify_first(self, group):
         wd = self.app.wd
         # open groups page
         self.open_groups_page()
