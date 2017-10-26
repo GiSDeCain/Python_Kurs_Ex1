@@ -15,7 +15,8 @@ class ContactHelper:
         # start modify contact
         wd.find_element_by_xpath("//*[@title='Edit'][1]").click()
         self.fill_new_contact_form(contact)
-        self.submit_new_contact()
+        bug_element = wd.find_element_by_name('update')
+        wd.execute_script("arguments[0].click();", bug_element)
 
     def del_first_contact(self):
         # delete first contact from list
