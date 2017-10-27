@@ -7,14 +7,14 @@ class ContactHelper:
 
     def add_new_contact(self, contact):
         self.open_add_contact_page()
-        self.fill_new_contact_form(contact)
-        self.submit_new_contact()
+        self.fill_contact_form(contact)
+        self.submit_contact()
 
     def modify_first_contact(self, contact):
         wd = self.app.wd
         # start modify contact
         wd.find_element_by_xpath("//*[@title='Edit'][1]").click()
-        self.fill_new_contact_form(contact)
+        self.fill_contact_form(contact)
         bug_element = wd.find_element_by_name('update')
         wd.execute_script("arguments[0].click();", bug_element)
 
@@ -34,7 +34,7 @@ class ContactHelper:
         wd = self.app.wd
         wd.find_element_by_link_text("add new").click()
 
-    def fill_new_contact_form(self, contact):
+    def fill_contact_form(self, contact):
         wd = self.app.wd
         # name section
         wd.find_element_by_name("firstname").clear()
@@ -86,7 +86,7 @@ class ContactHelper:
         wd.find_element_by_name("notes").clear()
         wd.find_element_by_name("notes").send_keys(contact.notes)
 
-    def submit_new_contact(self):
+    def submit_contact(self):
         wd = self.app.wd
         bug_element = wd.find_element_by_name('submit')
         wd.execute_script("arguments[0].click();", bug_element)
