@@ -23,8 +23,10 @@ class ContactHelper:
         wd = self.app.wd
         # select first element from list
         wd.find_element_by_xpath("//table[@id='maintable']//input[@type='checkbox']").click()
+        # scroll down page
+        wd.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         # submit deletion
-        wd.find_element_by_xpath("//div[@class='left']/input[@value='Delete']").click()
+        wd.find_element_by_xpath("//div[@class='left']/*[@value='Delete']").click()
         # confirm alert
         wd.switch_to_alert().accept()
 
