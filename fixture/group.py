@@ -29,19 +29,6 @@ class GroupHelper:
         wd.find_element_by_name("update").click()
         self.return_to_groups_page()
 
-    # Created by me before lesson. modified after lesson
-#    def modify_first_group(self, group):
-#        wd = self.app.wd
-#        # open groups page
-#        self.open_groups_page()
-#        self.select_first_group()
-#        # go to edit page
-#        wd.find_element_by_name("edit").click()
-#        self.fill_group_form(group)
-#        # submit group modify
-#        wd.find_element_by_name("update").click()
-#        self.return_to_groups_page()
-
     def delete_first_group(self):
         wd = self.app.wd
         self.open_groups_page()
