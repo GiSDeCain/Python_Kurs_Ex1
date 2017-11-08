@@ -60,5 +60,12 @@ class GroupHelper:
         wd = self.app.wd
         wd.find_element_by_link_text("group page").click()
 
+    def count(self):
+        wd = self.app.wd
+        # open groups page
+        self.open_groups_page()
+        # count all checkboxes
+        return len(wd.find_elements_by_name("selected[]"))
+
 
 __author__ = 'GiSDeCain'
