@@ -1,4 +1,4 @@
-
+from model.group import Group
 
 class GroupHelper:
 
@@ -67,6 +67,17 @@ class GroupHelper:
         self.open_groups_page()
         # count all checkboxes
         return len(wd.find_elements_by_name("selected[]"))
+
+    def get_group_list(self):
+        wd = self.app.wd
+        # open groups page
+        self.open_groups_page()
+        groups = []
+        for element in wd.find_elements_by_css_selector("span.group"):
+            text = element.text()
+            id = element.find_element_by_name("selected[]").get.atribute("value")
+            groups.append(Group(name=text, id=id))
+            return groups
 
 
 __author__ = 'GiSDeCain'
